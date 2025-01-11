@@ -4,8 +4,8 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// SecurityHeaders adds security headers to the response
-func SecurityHeaders() gin.HandlerFunc {
+// HandlerFunc adds security headers to the response
+func HandlerFunc() gin.HandlerFunc {
 	return func(ctx *gin.Context) {
 		ctx.Header("X-Frame-Options", "DENY")
 		ctx.Header(

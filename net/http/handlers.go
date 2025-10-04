@@ -5,6 +5,14 @@ import (
 )
 
 // Handler adds security headers to the response
+//
+// Parameters:
+//
+//   - next: the next handler to be called
+//
+// Returns:
+//
+//   - http.Handler: the handler with security headers
 func Handler(next http.Handler) http.Handler {
 	return http.HandlerFunc(
 		func(w http.ResponseWriter, r *http.Request) {

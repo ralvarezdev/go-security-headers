@@ -5,6 +5,10 @@ import (
 )
 
 // HandlerFunc adds security headers to the response
+//
+// Returns:
+//
+//	gin.HandlerFunc: the handler function
 func HandlerFunc() gin.HandlerFunc {
 	return func(ctx *gin.Context) {
 		ctx.Header("X-Frame-Options", "DENY")
